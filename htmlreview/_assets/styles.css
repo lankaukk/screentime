@@ -1,37 +1,84 @@
-body {
-  background-color: ;
+body{
+  background-color: black;
+  padding: 10vh;
 }
-
-* {
-  font-family: 'Comfortaa', cursive;
-  margin-left: 10vw;
-  margin-right: 10vw;
-}
-
 
 video {
-  height: 500px;
-  max-width: 70%;
-  position: relative;
-  display: inline;
-  margin: 5vw;
+  outline: 1px solid white;
 }
 
-.videobox {
-  position: absolute;
-  top: 100vh;
+@media only screen and (min-width: 600px) {
+  video {
+    height: 80vh;
+  }
+  .videobox {
+    position: absolute;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1;
+  }
+  .video1, .video2, .video3 {
+    padding: 3%; }
+
+  .video1:hover, .video2:hover, .video3:hover {
+      animation: vibrate 75ms infinite;
+      animation-timing-function: linear;
+    }
+
+  @keyframes vibrate {
+       0% { transform: rotate(2deg); }
+       50% { transform: rotate(-2deg); }
+       100% { transform: rotate(2deg); }
+    }
+
+  }
+
+  #mysvg {
+    z-index: -1;
+    position: fixed;
+    top:-5vh;
+    left:-15vw;
+  }
+  #myphonesvg {
+    display: none;
+    opacity: 0;
+  }
 }
 
-p {
-  font-size: 100px;
-  position: absolute;
-  top: 35vh;
-}
 
-.lines {
-  height: 100vh;
-  width: 5px;
-  color: cyan;
-  position: fixed;
-  left: 10px;
+@media only screen and (max-width: 600px) {
+  video {
+    max-width: 75vw;
+    position: relative;
+    display: inline;
+    align-items: center;
+  }
+  .videobox {
+    position: absolute;
+    top: 10vh;
+    left: 10%;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+  }
+
+  #myphonesvg {
+    /* display: none;
+    opacity: 0; */
+    z-index: -1;
+    position: fixed;
+    top:-5vh;
+    left:-15vw;
+    transform: scale(1.5);
+    width: auto;
+    height: auto;
+  }
+
+  #mysvg {
+    display: none;
+    opacity: 0;
+
+  }
+
+
 }
