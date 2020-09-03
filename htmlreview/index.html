@@ -4,31 +4,36 @@
 		<meta charset="utf-8">
 		<title>Screentime</title>
 
-		<link href="_assets/styles.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-		<script src="_assets/jquery.js"></script>
-    <script src="_assets/script.js"></script>
+		<link href="styles.css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="favicon.png">
 
 	</head>
 <body>
- <p>screentime...</p>
 
-<div class="lines">
-</div>
+	<div class="videobox">
+		<div class= "video1">
+		  <video autoplay controls loop>
+		    <source src="screentime1.mp4" type="video/mp4">
+		  </video>
+		</div>
 
-<div class="videobox">
-  <video autoplay muted loop>
-    <source src="_assets/images/screentime1.mp4" type="video/mp4">
-  </video>
+		<div class= "video2">
+			<video autoplay controls loop>
+		    <source src="screentime2.mp4" type="video/mp4">
+		  </video>
+		</div>
 
-	<video autoplay muted loop>
-    <source src="_assets/images/screentime2.mp4" type="video/mp4">
-  </video>
-
-	<video autoplay muted loop>
-    <source src="_assets/images/screentime3.mp4" type="video/mp4">
-  </video>
-</div>
+		<div class= "video3">
+			<video autoplay controls loop>
+		    <source src="screentime3_1.mp4" type="video/mp4">
+		  </video>
+		</div>
+	</div>
 
 </body>
+
+<object id="mysvg" type="image/svg+xml" data="glass_widescreen_animated.svg" width="135%" height="130%" preserveAspectRatio="none"></object>
+<object id="myphonesvg" type="image/svg+xml" data="glass_iphone_animated.svg"  width="135%" viewBox="0 0 250 100"></object>
+
+
 </html>
